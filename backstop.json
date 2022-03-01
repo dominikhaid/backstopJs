@@ -34,7 +34,7 @@
       "label": "Selects 3 tickets",
       "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
       "onReadyScript":"puppet/custom/selectTickets.js",
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 0,
       "requireSameDimensions": true
     },
     {
@@ -55,6 +55,44 @@
       "label": "Succesfully Submit Form",
       "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
       "onReadyScript":"puppet/custom/successfullFormSubmit.js",
+      "hideSelectors": [".success span"],
+      "misMatchThreshold" : 0.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Header component",
+      "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
+      "selectors": ["header"],
+      "misMatchThreshold" : 0.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Reset button component",
+      "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
+      "selectors": ["button.reset"],
+      "misMatchThreshold" : 0.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Submit button disabled component",
+      "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
+      "selectors": ["button[type=\"submit\"]"],
+      "misMatchThreshold" : 0.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Submit button enabled component",
+      "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
+      "onReadyScript":"puppet/custom/validForm.js",
+      "selectors": ["button[type=\"submit\"]"],
+      "misMatchThreshold" : 0.0,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Success Message component",
+      "url": "https://ticketbox-backstopjs-tat.s3.eu-central-1.amazonaws.com/index.html",
+      "onReadyScript":"puppet/custom/successfullFormSubmit.js",
+      "selectors": ["div.success"],
       "hideSelectors": [".success span"],
       "misMatchThreshold" : 0.0,
       "requireSameDimensions": true
